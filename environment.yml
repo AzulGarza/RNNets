@@ -1,0 +1,38 @@
+name: datomico-NLP
+channels:
+  - pytorch
+  - anaconda
+  - conda-forge
+  - defaults
+dependencies:
+  - pandas
+  - scipy
+  - matplotlib
+  - matplotlib-base
+  - ipykernel
+  - ipython
+  - ipython_genutils
+  - ipywidgets
+  - jupyter
+  - jupyter_client
+  - jupyter_console
+  - jupyter_core
+  - markupsafe
+  - nbconvert
+  - notebook
+  - numpy
+  - numpy-base
+  - pandoc
+  - pandocfilters
+  - pillow
+  - pip
+  - qt
+  - qtconsole
+  - readline
+  - setuptools
+  - six
+  - widgetsnbextension
+  - pytorch
+  - torchvision
+  - pip:
+    - torch==1.0.0
