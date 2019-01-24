@@ -1,3 +1,2 @@
-cpp_cuda_ext
-extension_cpp
+extension_cpp/
 *.swp
