@@ -1,2 +1,4 @@
 extension-cpp/
 *.swp
+__pycache__/
+.pytest_cache
