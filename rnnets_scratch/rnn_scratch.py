@@ -75,6 +75,20 @@ def rnn_forward(x, h0, parameters):
 
 
 def rnn_cell_backward(dh_next, cache):
+    """ Implements the bwd pass for RNN-cell
+    Parameters:
+    -----------
+    dh_next : Gradient of loss w.r.t. next hidden state.
+    cache : Python dictionary containing useful values (output of rnn_cell_forward())
+    Returns:
+    --------
+    gradients : python dictionary containing:
+        dxt : Gradients of input data, shape (n_x, m)
+        dh_prev : Gradients of previous hidden state, shape (n_a, m)
+        dU : Gradients of input-to-hidden weights, shape (n_a, n_x)
+        dW: Gradients of hidden-to-hidden weights, shape (n_a, n_a)
+        db : Gradients of bias, shape (n_a, 1)
+    """
     (h_next, h_prev, xt, parameters) = cache
 
     U = parameters["U"]
