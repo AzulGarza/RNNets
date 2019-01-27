@@ -320,7 +320,7 @@ def model(data, ix_to_char, char_to_ix, num_iterations=35000, n_h=70, names=9, v
     loss = get_initial_loss(vocab_size, names)
 
     # Build list of all names (training examples).
-    with open("data/names/Chinese.txt") as f:
+    with open("../data/names/Chinese.txt") as f:
         examples = f.readlines()
     examples = [x.lower().strip() for x in examples]
 
@@ -369,7 +369,7 @@ def model(data, ix_to_char, char_to_ix, num_iterations=35000, n_h=70, names=9, v
 
 
 if __name__ == '__main__':
-    data = open('data/names/Chinese.txt', 'r').read()
+    data = open('../data/names/Chinese.txt', 'r').read()
     data = data.lower()
     chars = list(set(data))
     data_size, vocab_size = len(data), len(chars)
