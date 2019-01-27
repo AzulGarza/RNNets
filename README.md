@@ -1,5 +1,33 @@
 # RNNets 
 
+## Contenido
+
+El contenido no pretende ser exhaustivo, más bien servirá de guía siguiendo lo establecido en la [planeación](Datómico-NLP.pdf).  
+
+
+### TODO:
+- [ ] Notas DL Book
+- [ ] Notas Coursera 
+- [ ] Notas Udacity RNNets
+- [X] Implementación scratch
+- [X] Implementación Pytorch (Python Front-end)
+- [ ] Implementación Fastai
+- [ ] Implementación Pytorch (C++ Front-end)
+- [ ] Implementación Pytorch custom C++ and CUDA extensions
+- [ ] Extending TorchScript with custom C++ Operators
+- [ ] Producción de acuerdo a tutorial pytorch.
+
+
+## Links importantes:
+
+- [Recurrent Neural Networks Standford Cheatsheet](https://stanford.edu/~shervine/teaching/cs-230/cheatsheet-recurrent-neural-networks)
+- [Deep Learning Book: Capítulo Modelos Secuenciales](https://www.deeplearningbook.org/contents/rnn.html)
+- [Understanding LSTM Networks](https://colah.github.io/posts/2015-08-Understanding-LSTMs/)
+- [Karpathy blog: The Unreasonable Effectiveness of RNNets](https://karpathy.github.io/2015/05/21/rnn-effectiveness/)
+- [Clase Karpathy Standford](https://www.youtube.com/watch?v=iX5V1WpxxkY)
+- [Edwin Chen Blog: Exploring LSTMs](http://blog.echen.me/2017/05/30/exploring-lstms/)
+- [GLUE Benchmark (Mencionado en el el pdf de la planeación de Datómico-NLP](https://arxiv.org/pdf/1804.07461.pdf).
+
 ## Instalación
 1. `git clone https://github.com/datomicomx/RNNets.git`
 2. `cd RNNets`
@@ -29,20 +57,3 @@ Es un modelo de lenguaje a nivel carácter utilizando la arquitectura de Recurre
 ### Nota:
 - El env **datomico-NLP** es el que estoy usando para todo el desarrollo de datómico exclusivo de NLP.
 
-
-### Contenido
-
-El contenido no pretende ser exhaustivo, más bien servirá de guía. En cuanto a las notas, irán en el wiki o en alguna otra parte para poder meter ecuaciones. 
-
-La intención es que al final tengamos un compendio de NLP para que los que vayan entrando se puedan integrar más rápido porque es difícil que hayan visto algo de esto en clases.
-
-- [ ] Notas DL Book
-- [ ] Notas Coursera 
-- [ ] Notas Udacity RNNets
-- [X] Implementación scratch
-- [X] Implementación Pytorch (Python Front-end)
-- [ ] Implementación Fastai
-- [ ] Implementación Pytorch (C++ Front-end)
-- [ ] Implementación Pytorch custom C++ and CUDA extensions
-- [ ] Extending TorchScript with custom C++ Operators
-- [ ] Producción de acuerdo a tutorial pytorch.
