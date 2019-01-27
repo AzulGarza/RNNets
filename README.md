@@ -6,6 +6,18 @@
 3. `conda env update`
 4. `source activate datomico-NLP`
 
+
+### 1. Implementación sólo numpy
+1. Realizar paso de instalación.
+2. `python rnn_scratch.py`
+3. El modelo de lenguaje da buenos resultados. Aquí algunos nombres:
+    1. Japonés: Yoshimara, Toko, Miyoshi.
+    2. Francés: Getrin, Seran, Balle, Sabian.
+    3. Alemán: Maußstanhin, Köstz, Wierhner.
+    4. Chino: Lin, Yin, Tao, Shuaou-yang. 
+
+
+
 ### Nota:
 - El env **datomico-NLP** es el que estoy usando para todo el desarrollo de datómico exclusivo de NLP.
 

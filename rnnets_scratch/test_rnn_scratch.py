@@ -1,6 +1,7 @@
 import numpy as np
 from .rnn_scratch import (rnn_cell_forward, rnn_forward,
-                          rnn_cell_backward, rnn_backward)
+                          rnn_cell_backward, rnn_backward,
+                          clip, sample)
 np.random.seed(1)
 
 
@@ -63,6 +64,9 @@ class TestRNN_Fwd(object):
         assert gradients["dxt"].shape == (3, 10)
 
     def test_rnn_bwd(self):
+        """
+        Test backprop
+        """
         np.random.seed(1)
         x = np.random.randn(3, 10, 4)
         h0 = np.random.randn(5, 10)
@@ -77,5 +81,35 @@ class TestRNN_Fwd(object):
         gradients = rnn_backward(dh, caches)
         assert gradients["dx"].shape == (3, 10, 4)
         # Por qué la precisión cambia?
-        # assert gradients["dU"][3][1] == 11.264104496527779
-        assert gradients["dU"][3][1] == 11.264104496527777
+        assert gradients["dU"][3][1] == 11.264104496527779
+        # assert gradients["dU"][3][1] == 11.264104496527777
+
+    def test_clipped_gradients(self):
+        """
+        Test the values of the clipped gradients
+        """
+        np.random.seed(3)
+        dU = np.random.randn(5, 3)*10
+        dW = np.random.randn(5, 5)*10
+        dV = np.random.randn(2, 5)*10
+        db = np.random.randn(5, 1)*10
+        dc = np.random.randn(2, 1)*10
+        gradients = {"dU": dU, "dW": dW, "dV": dV, "db": db, "dc": dc}
+        gradients = clip(gradients, 10)
+        assert gradients["dW"][1][2] == 10.0
+        assert gradients["dU"][3][1] == -10.0
+        assert gradients["dV"][1][2] == 0.2971381536101662
+        assert gradients["db"][4] == 10.
+
+    #def test_sample_seq_chars(self):
+    #    """ Test the sample function of rnn_scratch """
+    #    np.random.seed(2)
+    #    _, n_h = 20, 100
+    #    b = np.random.randn(n_h, 1)
+    #    vocab_size = b.shape[0]
+    #    U, W, V = np.random.randn(n_h, vocab_size),\
+    #        np.random.randn(n_h, n_h), np.random.rand(vocab_size, n_h)
+    #    c = np.random.randn(vocab_size, 1)
+    #    parameters = {"U": U, "W": W, "V": V, "b": b, "c": c}
+
+    #    indices = sample(parameters, char_to_ix, 0)
