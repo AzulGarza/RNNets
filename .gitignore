@@ -4,3 +4,4 @@ cpp_cuda_ext/
 __pycache__/
 .pytest_cache
 .ipynb_checkpoints/
+dlbook_notation/
