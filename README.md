@@ -2,7 +2,7 @@
 
 ## Contenido
 
-El contenido no pretende ser exhaustivo, más bien servirá de guía siguiendo lo establecido en la [planeación](Datómico-NLP.pdf).  
+El contenido no pretende ser exhaustivo, más bien servirá de guía siguiendo lo establecido en la [planeación](Datomico-NLP.pdf).  
 
 
 ### TODO:
