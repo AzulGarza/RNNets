@@ -23,6 +23,9 @@ Es un modelo de lenguaje a nivel carácter utilizando la arquitectura de Recurre
 	5. Nombres de dinosaurios: Itosaurus, Trnanatrax, Yrosaurus, Trodon, Macaesaurus.
 
 
+### 2. Implementación Pytorch (Python Front-end)
+[Link Pytorch](https://pytorch.org/tutorials/intermediate/char_rnn_generation_tutorial.html).
+
 ### Nota:
 - El env **datomico-NLP** es el que estoy usando para todo el desarrollo de datómico exclusivo de NLP.
 
@@ -37,7 +40,7 @@ La intención es que al final tengamos un compendio de NLP para que los que vaya
 - [ ] Notas Coursera 
 - [ ] Notas Udacity RNNets
 - [X] Implementación scratch
-- [ ] Implementación Pytorch (Python Front-end)
+- [X] Implementación Pytorch (Python Front-end)
 - [ ] Implementación Fastai
 - [ ] Implementación Pytorch (C++ Front-end)
 - [ ] Implementación Pytorch custom C++ and CUDA extensions

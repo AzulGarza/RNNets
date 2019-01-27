@@ -1,4 +1,5 @@
 extension-cpp/
+cpp_cuda_ext/
 *.swp
 __pycache__/
 .pytest_cache
