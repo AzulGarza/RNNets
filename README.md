@@ -8,14 +8,19 @@
 
 
 ### 1. Implementación sólo numpy
+*Aunque no es la manera más eficiente de hacer un modelo de lenguaje, la implementación con numpy desde cero está para que podamos entender de donde sale cada cosa, por favor si ven un error creen Issues para resolverlos.*
+
+Es un modelo de lenguaje a nivel caracter utilizando la arquitectura de Recurrent Neural Networks. Para referencias ver Deep Learning Book: [Capítulo RNNets](https://www.deeplearningbook.org/contents/rnn.html)
+
+
 1. Realizar paso de instalación.
-2. `python rnn_scratch.py`
+2. `python rnn_scratch.py` (Por fa ahorita no corran los tests, hay unos errores de **floating points** que tengo que ver)
 3. El modelo de lenguaje da buenos resultados. Aquí algunos nombres:
     1. Japonés: Yoshimara, Toko, Miyoshi.
     2. Francés: Getrin, Seran, Balle, Sabian.
     3. Alemán: Maußstanhin, Köstz, Wierhner.
     4. Chino: Lin, Yin, Tao, Shuaou-yang. 
-
+	5. Nombres de dinosaurios: Itosaurus, Trnanatrax, Yrosaurus, Trodon, Macaesaurus.
 
 
 ### Nota:
@@ -31,7 +36,7 @@ La intención es que al final tengamos un compendio de NLP para que los que vaya
 - [ ] Notas DL Book
 - [ ] Notas Coursera 
 - [ ] Notas Udacity RNNets
-- [ ] Implementación scratch
+- [X] Implementación scratch
 - [ ] Implementación Pytorch (Python Front-end)
 - [ ] Implementación Fastai
 - [ ] Implementación Pytorch (C++ Front-end)
