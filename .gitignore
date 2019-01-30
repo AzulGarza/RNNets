@@ -5,3 +5,6 @@ __pycache__/
 .pytest_cache
 .ipynb_checkpoints/
 dlbook_notation/
+.ipython
+.vscode
+.pylint.d
