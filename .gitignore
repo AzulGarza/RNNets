@@ -8,3 +8,5 @@ dlbook_notation/
 .ipython
 .vscode
 .pylint.d
+.jupyter
+.matplotlib
