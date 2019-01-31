@@ -1,4 +1,6 @@
 import numpy as np
+from typing import Dict
+
 
 
 def softmax(x):
@@ -17,18 +19,21 @@ def print_sample(sample_ix, ix_to_char):
     print('%s' % (txt, ), end='')
 
 
-def initialize_parameters(n_h, n_x, n_y):
-    """
-    Initialize parameters with small random values
+def initialize_parameters(n_h:int, n_x:int, n_y:int) -> Dict[str, int]:
+    """ Initialize parameters with small random values
+
+    Parameters:
+        n_h (int): Number of hidden units in the RNN cel..
+        n_x (int): Number of input units.
+        n_y (int): Number of output units.
 
     Returns:
-    --------
-    parameters : python dictionary containing:
-        U -- Weight matrix multiplying the input, shape (n_h, n_x)
-        W -- Weight matrix multiplying the hidden state, shape (n_h, n_h)
-        V -- Weight matrix of hidden-state to the output, shape (n_y, n_h)
-        b -- Bias, numpy array of shape (n_h, 1)
-        c -- Bias relating the hidden-state to the output, shape (n_y, 1)
+        parameters: a python dictionary containing:
+            U -- Weight matrix multiplying the input, shape (n_h, n_x)
+            W -- Weight matrix multiplying the hidden state, shape (n_h, n_h)
+            V -- Weight matrix of hidden-state to the output, shape (n_y, n_h)
+            b -- Bias, numpy array of shape (n_h, 1)
+            c -- Bias relating the hidden-state to the output, shape (n_y, 1)
     """
     np.random.seed(1)
     U = np.random.randn(n_h, n_x)*0.01  # input to hidden
@@ -76,8 +81,8 @@ def rnn_forward(X, Y, h0, parameters, vocab_size=29):
 
     Parameters:
     -----------
-    X : Input data for every time-step 't', shape (n_x, m, T_x).
-    Y : Output for every time-step 't'
+    X : list of integers, each int is a number mappint to a char in vocab.
+    Y : list of integers, same as X but shifted one index to the left.
     h0 : Initial hidden state, shape (n_h, m)
     vocab_size : Number of unique characters in your vocabulary
     parameters : python dictionary containing:
@@ -141,8 +146,8 @@ def rnn_backward(X, Y, parameters, cache):
     """ Implements the back prop for a RNN
     Parameters:
     -----------
-    X :
-    Y :
+    X : list of integers, each int is a number mappint to a char in vocab.
+    Y : list of integers, same as X but shifted one index to the left.
     parameters : python dict with matrices and bias.
     cache : Tuple with y_hat, h, and x
 
@@ -264,8 +269,11 @@ def optimize(X, Y, h_prev, parameters, learning_rate=0.01):
     Parameters:
     -----------
     X : list of integers, each int is a number mappint to a char in vocab.
+
     Y : list of integers, same as X but shifted one index to the left.
+
     h_prev : previous hidden state.
+
     parameters -- python dictionary containing:
         U : Weight matrix multiplying the input, shape (n_h, n_x)
         W : Weight matrix multiplying the hidden state, shape (n_h, n_h)
