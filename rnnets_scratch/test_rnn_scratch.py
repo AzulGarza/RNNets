@@ -1,5 +1,5 @@
 import numpy as np
-from .rnn_scratch import (initialize_parameters, rnn_cell_forward, rnn_forward,
+from rnn_scratch import (initialize_parameters, rnn_cell_forward, rnn_forward,
                           rnn_cell_backward, rnn_backward,
                           clip, sample)
 np.random.seed(1)
@@ -37,7 +37,7 @@ class TestRNN_Fwd(object):
         Test fwd prop of the rnn
         """
        # vocab_size = 29
-       # X = [None] + list(range(1, 20, 2)) 
+       # X = [None] + list(range(1, 20, 2))
        # Y = X[1:] + [0]
        # h0 = np.random.randn(70, 1)
        # W = np.random.randn(70, vocab_size)
